@@ -13,13 +13,22 @@ export const ProjectListItem: FC<TProject> = ({
   return (
     <div>
       <div className="aspect-TV relative h-[270px] w-full overflow-hidden lg:h-[350px]">
-        <Image
-          src={imageSrc}
-          alt={title}
-          className="object-cover object-top"
-          fill
-          sizes="(max-width: 768px) 300px 400px, (max-width: 1024px) 500px, 600px"
-        />
+        {imageSrc ? (
+          <Image
+            src={imageSrc}
+            alt={title}
+            className="object-cover object-top"
+            fill
+            sizes="(max-width: 768px) 300px 400px, (max-width: 1024px) 500px, 600px"
+          />
+        ) : (
+          <div className="h-full w-full">
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-3xl font-bold text-white">Coming soon</span>
+            </div>
+          </div>
+        )}
       </div>
       <div className="mt-2 flex flex-col text-white">
         <span className="font-RobotoMono text-xl uppercase">{title}</span>

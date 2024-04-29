@@ -16,6 +16,13 @@ const PROJECT_LIST: TProject[] = [
     websiteUrl: "https://lootlog.vercel.app",
     githubUrl: "https://github.com/SoftwareDevChris/lootlog-gaming-news",
   },
+  {
+    imageSrc: "",
+    title: "Cocktail recipe website",
+    tags: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    websiteUrl: "https://drinklab.vercel.app",
+    githubUrl: "https://github.com/SoftwareDevChris/cocktails",
+  },
 ];
 
 export const ProjectList = () => {
@@ -25,7 +32,7 @@ export const ProjectList = () => {
       <p className="mt-1 text-sm text-neutral-300">
         Here are some of the projects {"I've"} worked on.
       </p>
-      <div className="mt-8 grid grid-flow-row gap-2 sm:grid-cols-2">
+      <div className="mt-8 grid grid-flow-row gap-4 sm:grid-cols-2">
         {PROJECT_LIST.map((project, i) => (
           <ProjectListItem
             key={i}
