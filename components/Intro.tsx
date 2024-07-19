@@ -14,8 +14,9 @@ export const Intro = () => {
         </span>
       </h3>
       <p className="mx-auto mt-8 max-w-[350px] leading-6 text-neutral-300 sm:max-w-[360px]">
-        Based in Denmark, {"I'm"} a front-end developer passionate about
-        building beautiful and accessible web apps that users love.
+        {
+          "I'm a Denmark-based software engineer on a mission to bridge the gap between design and functionality. I enjoy translating various ideas into intuitive and interactive solutions."
+        }
       </p>
       <div className="mt-8">
         <ContactMeButton />
